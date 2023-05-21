@@ -60,6 +60,7 @@ main (void) {
         }
     } while (opcao != 0);
     mensagem("Saindo do programa !!!");
+    limpaLista();
 }
 
 elemento *criarNovo() {
@@ -119,15 +120,43 @@ void inserePosicao() {
 }
 
 void limpaLista() {
-
+    if (inicio != NULL){
+        elemento *temp;
+        while (inicio != NULL) {
+            temp = inicio;
+            inicio = inicio->proximo;
+            free(temp);
+            numeroElementos--;
+        }
+    }
 }
 
 void mensagem(const char* mensagem) {
-
+    printf("\n\n%s", mensagem);
+    _sleep(1000);
 }
 
 void mostrarLista() {
-
+    system("cls");
+    if (inicio == NULL){
+        printf("Lista vazia !!!");
+        return;
+    }
+    printf("Dados:   ");
+    elemento *temp = inicio;
+    while (temp != NULL){
+        printf(" %c ", temp->conteudo);
+        temp = temp->proximo;
+    }
+    printf("\n         ");
+    for (int i = 1; i <= numeroElementos; ++i) {
+        printf(" |  ");
+    }
+    printf("\nPosição:");
+    for (int i = 1; i <= numeroElementos; ++i) {
+        printf("%4d", i);
+    }
+    printf("\n\n");
 }
 
 void retiraIncio() {
