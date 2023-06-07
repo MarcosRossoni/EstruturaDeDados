@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main() {
+int main() {
     int x[5] = {10, 20, 30, 40, 50};
     printf("x inicia em %X\n", &x);
     printf("x[0] incia em %X e tem valor %d\n", &x[0], x[0]);

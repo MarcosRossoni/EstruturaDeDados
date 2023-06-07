@@ -9,7 +9,7 @@ struct produto {
 
 produto meuProduto;
 
-main() {
+int main() {
     printf("Informe os dados do Produto\n\n");
     printf("Nome: ");
     gets(meuProduto.nome);

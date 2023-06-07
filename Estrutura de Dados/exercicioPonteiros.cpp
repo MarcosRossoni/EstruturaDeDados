@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main() {
+int main() {
     int x = 5;
     int *a = &x;
     printf("%d\n", x);

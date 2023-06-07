@@ -21,7 +21,7 @@ void retiraIncio();
 void retiraFim();
 void retiraPosicao();
 
-main (void) {
+int main (void) {
     setlocale(LC_ALL, "Portuguese");
     char opcao;
     do {
