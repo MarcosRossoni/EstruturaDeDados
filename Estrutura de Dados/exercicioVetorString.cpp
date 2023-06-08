@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-main() {
+int main() {
     char nome[7];
     int s = 0;
     strcpy(nome, "UNIPAR");

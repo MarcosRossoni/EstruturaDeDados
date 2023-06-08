@@ -6,13 +6,13 @@ char vetor[tamanho] = {'U', 'N',  'I', 'P', 'A', 'R'};
 char temp;
 int ii;
 
-imprimeVetor() {
+int imprimeVetor() {
     for (int i = 0; i <= tamanho - 1; i++) {
         printf("%c", vetor[i]);
     }
 }
 
-main() {
+int main() {
     setlocale(LC_ALL, "Portuguese");
     printf("Vetor antes da ordenação: ");
     imprimeVetor();
